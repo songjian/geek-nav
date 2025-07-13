@@ -8,3 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+Category.find_or_create_by!(name: '邮件测试', position: 1)
+Category.find_or_create_by!(name: '邮件服务', position: 2)
+
+Link.find_or_create_by!(title: 'mail-tester', url: 'https://www.mail-tester.com/', category_id: 1)
+Link.find_or_create_by!(title: 'resend.com', url: 'https://www.resend.com/', category_id: 2)
